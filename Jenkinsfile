@@ -36,9 +36,9 @@ pipeline {
 }
   stage('Run Gitleaks') {
   steps {
-    dir('https://github.com/LearnWithAshish/vulnado.git') {
+    dir('https://github.com/LearnWithAshish/wrongsecrets.git') {
       sh '''#!/bin/bash
-          sudo gitleaks detect -f json -r https://github.com/LearnWithAshish/vulnado.git -v --report=/home/ubuntu/gitleaks/gitleaks.json
+          sudo gitleaks detect -f json -r https://github.com/LearnWithAshish/wrongsecrets.git -v --report=/home/ubuntu/gitleaks/gitleaks.json
           exit 0
          '''
         }
